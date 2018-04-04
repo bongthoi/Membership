@@ -1,0 +1,82 @@
+[
+ 
+ {
+    "id":1,
+    "text":"DEMO",
+    "iconCls":"icon-base",
+    "attributes":{
+   	   "viahref":""
+      },
+		    "children":[{
+		        "text":"Index",
+		        "iconCls":"icon-gear",
+		        "attributes":{
+		            "viahref":"index"
+		        }  
+		    },
+		   
+		   
+		    {
+		        "text":"About",
+		        "state":"open",
+		        "iconCls":"icon-gear",
+		        "attributes":{
+		        	   "viahref":"about"
+		        }  
+		    }
+		   ]
+},
+{
+    "text":"Main ",
+    "state":"open",
+    "iconCls":"icon-base",
+    "attributes":{
+   	   "viahref":""
+      },
+    "children":[
+			    {
+			        "text":"Nation",
+			        "iconCls":"icon-gear",
+			        "attributes":{
+			      	   "viahref":"nation"
+			         }  
+			    },
+			    {
+			        "text":"Product",
+			        "iconCls":"icon-gear",
+			        "attributes":{
+			      	   "viahref":"product"
+			         }  
+			    },  {
+			        "text":"Requirements",
+			        "iconCls":"icon-gear",
+			        "attributes":{
+			      	   "viahref":"requirements"
+			         }  
+			    }]
+},
+{
+    "text":"Translator ",
+    "state":"open",
+    "iconCls":"icon-base",
+    "attributes":{
+   	   "viahref":""
+      },
+    "children":[
+			  
+			    {
+			        "text":"Non Translate",
+			        "iconCls":"icon-gear",
+			        "attributes":{
+			      	   "viahref":"nontrans"
+			         }  
+			    },
+			      {
+			        "text":"Translated",
+			        "iconCls":"icon-gear",
+			        "attributes":{
+			      	   "viahref":"translated"
+			         }  
+			    }]
+}
+]

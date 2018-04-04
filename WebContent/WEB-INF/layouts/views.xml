@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="index" extends="DefaultTemplate">
+    	 <put-attribute name="title" type="string" value="index" />  
+        <put-attribute name="body"  value="/WEB-INF/views/product/index.jsp" />
+    </definition>
+    
+     <definition name="product" extends="DefaultTemplate">
+    	 <put-attribute name="title" type="string" value="" />  
+        <put-attribute name="body"  value="/WEB-INF/views/product/product.jsp" />
+    </definition>
+     <definition name="no_product" extends="DefaultTemplate">
+    	 <put-attribute name="title" type="string" value="No product" />  
+    	 <put-attribute name="header"  value="/WEB-INF/views/product/header_error.jsp" />
+        <put-attribute name="body"  value="/WEB-INF/views/product/no_product.jsp" />
+    </definition>
+    <definition name="detailproduct" extends="DefaultTemplate">
+    	 <put-attribute name="title" type="string" value="" />  
+        <put-attribute name="body"  value="/WEB-INF/views/product/detaiproduct.jsp" />
+    </definition>
+      
+</tiles-definitions>

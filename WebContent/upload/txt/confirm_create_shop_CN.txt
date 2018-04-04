@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="js/extra.js"></script>
+ <script src="js/jquery-1.10.2.js"></script>   
+
+</head>
+<body style="width:600px">
+	<table style="border: 1px solid;text-align:left;width:100%;margin:25px">
+		<thead>
+			<tr>
+				<td colspan="2">
+					<img class="CToWUd" style="border:none;outline:none;text-decoration:none;display:inline;min-height:auto" src="http://vivmall.vn/image/vivlogo.jpg" alt="Logo">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="line-height:30px;background-color:green;color:white;text-align:center">
+					激活注册账户
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding:20px 15px;"><span><b>您好 @shopname1 !</b></span>
+					<br>
+					<span>我们已收到Vivmall.vn的开户请求和以下信息</span>
+					<br>
+					</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<table style="border-top:1px solid gray;border-bottom:1px solid gray;width:100%;">
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>账户名称</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@shopname2</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>电子邮件</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@emai</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span> 密码</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@password</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>店名</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@shopname3</b></span><br></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" style="padding: 5px 15px;">
+					<span style="color:#39792f"><b>	以继续注册过程，请点击下面链路或复制到任何网页浏览器地址中，然后按Enter:</b></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="row">
+				<div class="row ">
+									<div class="col-md-12">
+										<label style="color: #333333;font-size:13px;" id="content_confirm">
+										<a href="@href">
+										@url</a></label>
+									</div>
+								</div>
+				</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

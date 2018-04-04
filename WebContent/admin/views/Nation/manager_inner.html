@@ -1,0 +1,71 @@
+
+<div id="tt" class="easyui-tabs" style="width:100%;"  >
+	<div title="Nation" style="padding:5px;">
+	<table id="dg" style="width:100%;"></table>	
+			<div id="tbar" style="padding:5px;height:auto">
+				    <div style="margin-bottom:5px">
+				        <a id="idappend" class="easyui-linkbutton" iconCls="icon-add" plain="true">Append</a>
+				        <a id="idremove" class="easyui-linkbutton" iconCls="icon-remove" plain="true">Remove</a>
+				    </div>
+				</div>
+	</div> <!-- end tab1 -->
+	
+</div>		<!-- end main -->
+			  
+<!-- tab1 -->
+<script type="text/javascript" src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/easyui1-5/datagrid-detailview.js"></script>
+<script type="text/javascript" src="admin/js/nation/main.js"></script>
+<script type="text/javascript" src="admin/js/nation/crud_grid.js"></script>
+<script type="text/javascript">
+function save1(target){
+    var tr = $(target).closest('.datagrid-row-detail').closest('tr').prev();
+    var index = parseInt(tr.attr('datagrid-row-index'));
+    saveItem(index);
+}
+function cancel1(target){
+    var tr = $(target).closest('.datagrid-row-detail').closest('tr').prev();
+    var index = parseInt(tr.attr('datagrid-row-index'));
+    //console.log(index)
+    cancelItem(index);
+}
+function cancelItem(index){
+	var row = $('#dg').datagrid('getRows')[index];
+	if (row.isNewRecord){
+		$('#dg').datagrid('deleteRow',index);
+	} else {
+		$('#dg').datagrid('collapseRow',index);
+	}
+}
+function saveItem(index){
+	var type='A';
+	var row = $('#dg').datagrid('getRows')[index];
+	if(row.isNewRecord ){
+		 type='A';
+		
+	}else{
+		 type='E';
+	}
+	var url = extras_Hosting["tomcatSpring_context"]+'ad/NationController/add_update_nation?ptype='+type;
+	$('#dg').datagrid('getRowDetail',index).find('form').form('submit',{
+		url: url,
+		onSubmit: function(){
+			return $(this).form('validate');
+		},
+		success: function(result){
+			/*data = eval('('+data+')');
+			data.isNewRecord = false;
+			$('#dg').datagrid('collapseRow',index);
+			$('#dg').datagrid('updateRow',{
+				index: index,
+				row: data
+			});*/
+			var data=JSON.parse(result);
+	        $.messager.alert('Info', data.message, 'info');
+	    	$('#dg').datagrid('clearChecked');
+	    	$('#dg').datagrid('reload');
+		}
+	});
+}
+</script>
+

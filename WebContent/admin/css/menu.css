@@ -1,0 +1,49 @@
+.menucolor ul li > a {
+	color: #006699;
+	background-color: white;
+}
+.menucolor ul li > a:hover {
+	color:white ;
+	background-color: #006699;
+}
+ul.hmenu, ul.hmenu ul {
+  list-style: none;
+}
+ ul.hmenu li {
+ display:inline-block;
+ float:left;
+ margin-left:6.5px;
+}
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}

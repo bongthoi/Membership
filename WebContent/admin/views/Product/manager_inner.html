@@ -1,0 +1,73 @@
+
+<div id="tt" class="easyui-tabs" style="width:100%;">
+	<div title="产品" style="padding:5px;">
+	<table id="iddatagrip" style="width:100%;"></table>	
+			<div id="tbar" style="padding:5px;height:auto">
+				    <div style="margin-bottom:5px">
+				        <a id="idadd" class="easyui-linkbutton" iconCls="icon-add" plain="true">添加</a>
+				        <a id="idedit" class="easyui-linkbutton" iconCls="icon-edit" plain="true">编辑</a>
+				        <a id="idremove" class="easyui-linkbutton" iconCls="icon-remove" plain="true">移除</a>
+				         <a id="btnvisible"  class="easyui-linkbutton" iconCls="icon-lock" plain="true">隐藏</a> 
+						<a id="btnunvisible"  class="easyui-linkbutton" iconCls="icon-unlock" plain="true">显示</a>
+						<a id="btnpreview"  class="easyui-linkbutton" iconCls="icon-large-clipart" plain="true">预览您的网站</a>
+				    </div>
+				    <div>
+				       <input id="ss" style="width:350px"></input>
+				       <div id="mm" style="width:170px">
+						
+						</div>
+				    </div>
+				</div>
+		
+	</div> <!-- end tab1 -->
+	
+	<div title="添加/编辑" style="padding:5px;">
+		<div style="padding:5px;background:#fafafa;width:99%;border:1px solid #ccc">
+					<a id="menu_save" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-save">保存</a>
+					<a id="menu_add" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-add">新要求</a>
+					<a id="menu_reload" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-reload">刷新</a>
+					</div>
+<!-- 	    	<div style="    margin-bottom: 5px ;padding-left: 7px;"> -->
+<!-- 	       		<label class="textbox-label textbox-label-top" style="text-align: left;">Select language:</label> -->
+<!-- 	            <input  id="cc_nation" style="width:20%;">   -->
+	         
+<!-- 	       </div> -->
+	       
+	       <div style="    margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">产品名称：</label>
+	           		<input id="idproduct_name"  style="width:40%;" class="easyui-textbox" data-options="required:true,validType:{length:[0,125]}" data-ptype="A" data-productid="0">
+	            <a id="id_btn1_view_img" class="easyui-linkbutton">上载图片</a>
+	       </div>
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">价格:</label>
+	           		<input id="idprice"  style="width:40%;" class="easyui-numberbox" data-options="required:true,validType:{length:[0,12]},min:0,groupSeparator:'.',prefix:'¥ '" >
+	       </div>
+	       <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">描述:</label>
+	       		<textarea id="my_editor_product" style="width:40%;height:200px;"></textarea>
+	       </div>
+	<div id="dialog_product_img" >
+		<div style="margin:0;padding:20px 50px">
+					<input type="hidden" id="idproductimg" value='' >
+					<div style="margin-bottom:10px;text-align:center;">
+						<img  src="upload/no_image.jpg" style="width:100px;heght:100px"/>
+					</div>
+					<div style="margin-bottom:10px">
+				 		<input  class="easyui-filebox"  name="donewsimg"  id="donewsimg"  data-options="prompt:'Upload image...'" style="width:100%">
+					</div>
+			</div>		
+	</div>	
+	</div>	<!-- end tab2 -->
+	
+	
+</div>		<!-- end main -->
+			  
+<!-- tab1 -->
+<script type="text/javascript" src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/js/jquery.ajaxfileupload.js"></script>
+<script type="text/javascript" src="admin/js/product/main.js"></script>
+<!-- tab12 -->
+
+<script type="text/javascript" src="admin/js/product/combogrid_cc_nation.js"></script>
+ <script type="text/javascript" src="admin/js/product/add_edit_product.js"></script> 
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Membership</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+   <servlet>
+		<servlet-name>spring</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>   
+	
+	<servlet-mapping>
+		<servlet-name>spring</servlet-name>
+		<url-pattern>/spring/*</url-pattern>
+	</servlet-mapping>	
+<context-param>
+    <param-name>savepath2</param-name>
+    <param-value>C:\\path\\to\\</param-value>
+</context-param>
+
+<context-param>
+    <param-name>saveeditor</param-name>
+    <param-value>/upload/editor</param-value>
+</context-param>
+<context-param>
+    <param-name>saveslideimage</param-name>
+    <param-value>/upload/slide</param-value>
+</context-param>
+<context-param>
+    <param-name>saveprogramimage</param-name>
+    <param-value>/upload/image/program</param-value>
+</context-param>
+<context-param>
+    <param-name>save_image</param-name>
+    <param-value>/upload/image</param-value>
+</context-param>
+<context-param>
+    <param-name>save_image_product</param-name>
+    <param-value>/upload/product</param-value>
+</context-param>
+<context-param>
+    <param-name>save_image_cate</param-name>
+    <param-value>/upload/category</param-value>
+  </context-param>
+  <context-param>
+    <param-name>save_image_company</param-name>
+    <param-value>/upload/company</param-value>
+  </context-param>
+  <context-param>
+    	<param-name>pathsaveimgckeditor</param-name>
+    	<param-value>http://localhost:8080/VivStudy/upload/image/</param-value>
+  </context-param>
+<context-param>
+    <param-name>saveeventimage</param-name>
+    <param-value>/upload/event</param-value>
+</context-param>	
+
+<context-param>
+    <param-name>save_imgbranch</param-name>
+    <param-value>/upload/branch</param-value>
+</context-param>
+<context-param>
+    <param-name>save_imgcolor</param-name>
+    <param-value>/upload/color</param-value>
+</context-param>
+<context-param>
+    <param-name>save_imgcatgorynews</param-name>
+    <param-value>/upload/catgorynews</param-value>
+</context-param>
+<context-param>
+    <param-name>save_imgnews</param-name>
+    <param-value>/upload/news</param-value>
+</context-param>
+ <context-param>
+    <param-name>urlconfirmcreateshop</param-name>
+    <param-value>http://www.vivmall.cn/Seller/index.html?cofirm=REGISTER??email=@email</param-value>
+  </context-param>
+  <context-param>
+    <param-name>urlconfirmforgetshop</param-name>
+    <param-value>http://www.vivmall.cn/Seller/index.html?cofirm=CHANGE??email=@email??pass=@password</param-value>
+  </context-param>
+<filter>  
+    <filter-name>encodingFilter</filter-name>  
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>  
+    <init-param>  
+       <param-name>encoding</param-name>  
+       <param-value>UTF-8</param-value>  
+    </init-param>  
+    <init-param>  
+       <param-name>forceEncoding</param-name>  
+       <param-value>true</param-value>  
+    </init-param>  
+</filter>  
+<filter-mapping>  
+    <filter-name>encodingFilter</filter-name>  
+    <url-pattern>/*</url-pattern>  
+</filter-mapping>
+<filter>
+	<filter-name>Adminfilter</filter-name>
+	<filter-class>
+		vn.vmall.pkgFilter.adminfilter
+	</filter-class>
+	<init-param>
+		<param-name>avoid-urls</param-name>
+		<param-value>/spring/ad/loginController/do_login</param-value>
+	</init-param>
+	<init-param>
+		<param-name>contextpath</param-name>
+		<param-value>/Membership</param-value>
+	</init-param>
+	
+	<init-param>
+		<param-name>Redirect_contextpath</param-name>
+		<param-value>/Membership</param-value>
+	</init-param>
+</filter>
+<filter-mapping>
+	<filter-name>Adminfilter</filter-name>
+	<url-pattern>/spring/ad/*</url-pattern>
+</filter-mapping>
+
+  
+</web-app>

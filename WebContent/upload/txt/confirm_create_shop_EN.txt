@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="js/extra.js"></script>
+ <script src="js/jquery-1.10.2.js"></script>    
+<title>Confirm template</title>
+</head>
+<body style="width:600px">
+	<table style="border: 1px solid;text-align:left;width:100%;margin:25px">
+		<thead>
+			<tr>
+				<td colspan="2">
+					<img class="CToWUd" style="border:none;outline:none;text-decoration:none;display:inline;min-height:auto" src="http://vivmall.vn/image/vivlogo.jpg" alt="Logo">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="line-height:30px;background-color:green;color:white;text-align:center">
+					KÍCH HOẠT ĐĂNG KÝ TÀI KHOẢN EN
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding:20px 15px;"><span><b>Xin chào @shopname1 !</b></span>
+					<br>
+					<span>Chúng tôi đã nhận được yêu cầu mở tài khoản của bạn tại Vivmall.vn với thông tin như sau</span>
+					<br>
+					</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<table style="border-top:1px solid gray;border-bottom:1px solid gray;width:100%;">
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Tên chủ tài khoản</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@shopname2</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Email</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@emai</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Password</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@password</b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Shop name</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span><b>@shopname3</b></span><br></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" style="padding: 5px 15px;">
+					<span style="color:#39792f"><b>Để tiếp tục quy trình đăng ký, xin vui lòng click vào đường link dưới đây hoặc
+					copy vào thanh địa chỉ trình duyệt web bất kỳ và nhấn Enter :</b></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="row">
+				<div class="row ">
+									<div class="col-md-12">
+										<label style="color: #333333;font-size:13px;" id="content_confirm">
+										<a href="@href">
+										@url</a></label>
+									</div>
+								</div>
+				</td>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

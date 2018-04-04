@@ -1,0 +1,12 @@
+.lberror{
+	color:red;
+	font-size:12px;
+}
+.comboboxdefault{
+	height:25px;
+}
+.clstd{
+	min-width:150px;
+}
+.rowselected { background-color: lightblue; }
+.unrowselected { background-color: white; }

@@ -1,0 +1,27 @@
+
+<div id="p" style="padding:10px;width:100%;">
+   <h1>Welcome to index</h1>
+</div>
+<script>
+$(function(){
+	
+	var title_="Welcome to index";
+	$('title').text(title_);
+	
+	$('#p').panel({
+	    title:title_
+	   /* tools:[{
+	        iconCls:'icon-add',
+	        handler:function(){alert('new')}
+	    },{
+	        iconCls:'icon-save',
+	        handler:function(){alert('save')}
+	    }]*/
+	}); 
+	
+
+	
+});
+
+
+</script>

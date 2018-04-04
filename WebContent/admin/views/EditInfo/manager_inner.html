@@ -1,0 +1,110 @@
+
+
+<div id="tt" class="easyui-tabs" style="width: 100%;" >
+	<div title="编辑信息" style="padding: 5px;">
+	<form id="frm_editinfo" method="post"> 
+			<div style="padding:5px;background:#fafafa;width:99%;border:1px solid #ccc">
+					<a id="btnsubmit" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-save">保存</a>
+			</div>
+			 <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">电子邮件:</label>
+	           		<input id="txtemail"  name="email" style="width:30%;" class="easyui-textbox" data-options="required:true,readonly:true,validType:'email'" >
+	       </div>
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">电话号码:</label>
+	           		<input id="txtphone_regis"  name="phone" style="width:30%;" class="easyui-textbox" data-options="required:true" >
+	       </div>
+	       <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">成立年份:</label>
+	           		<input id="txt_year_es_regis"  name="year_established" style="width:30%;" class="easyui-numberbox" data-options="required:true" >
+	       </div>
+	       
+	       <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">员工总数:</label>
+	           		<input id="txt_total_employ_regis"  name="total_employees" style="width:30%;" class="easyui-numberbox" data-options="required:true,min:0,groupSeparator:'.'" >
+	       </div>
+	       
+	         <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">年中营业额:</label>
+	           		<input id="txt_total_revenue_regis"  name="total_annual_revenue" style="width:30%;"class="easyui-numberbox" data-options="required:true,min:0,groupSeparator:'.',prefix:'¥ '" >
+	       </div>
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">公司描述:</label>
+	           		<textarea name="main_products" style="width:30%;height:120px" id="txtcompany_regis" ></textarea>
+	       </div>
+	       <input type="hidden" id="id_upload_success_certificate" name="certificate">
+	       	<input type="hidden" id="id_upload_success_license" name="license"> 
+	       <input type="hidden" id="id_upload_success_picture_company" name="picture_company">
+	  </form>   
+	       
+	       
+	       <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class=" textbox-label-left" style="text-align: left;">证书  (PDF File):</label>
+	
+				<span class="btn btn-primary btn-file ">
+				<span class="opso_language" data_opso="data_file:index,data_key:r18"> 选择档案</span>
+				<input type="file" name="txt_certificate">
+				</span>
+				&nbsp;&nbsp;&nbsp;&nbsp;<a id="link_cert" href="" target="blank"></a> 
+				<br>
+				<strong id="id_upload_success_certificate_strong_message" style="color: red"></strong>
+				
+		</div>
+		<div style="margin-bottom: 5px ;padding-left: 7px;">
+		 	<label class=" textbox-label-left" style="text-align: left;">执照 (PDF File):</label>
+				<span class="btn btn-primary btn-file ">
+				<span class="opso_language" data_opso="data_file:index,data_key:r18"> 选择档案</span>
+				<input type="file" name="txt_license">
+				</span>	
+			
+				&nbsp;&nbsp;&nbsp;&nbsp;<a id="link_license" href="" target="blank"></a> 
+				<br>
+				<strong id="id_upload_success_license_strong_message" style="color: red"></strong>
+		</div>
+		<div style="margin-bottom: 5px ;padding-left: 7px;">
+		 	<label class=" textbox-label-left" style="text-align: left;">公司标志:</label>
+				<span class="btn btn-primary btn-file ">
+				<span class="opso_language" data_opso="data_file:index,data_key:r18"> 选择图片</span>
+				<input type="file" name="txt_picture_company">
+				</span> 
+				&nbsp;&nbsp;&nbsp;&nbsp;<a id="link_picture" href="" target="blank"></a> 
+				<br>
+				<strong id="id_upload_success_picture_company_strong_message" style="color: red"></strong>
+		</div>
+	       
+	</div>
+	<!-- end tab1 -->
+	<!-- tab2 -->
+	<div title="更改密码" style="padding: 5px;">
+	
+			<div style="padding:5px;background:#fafafa;width:99%;border:1px solid #ccc">
+				<a class="easyui-linkbutton" iconCls="icon-save"  plain="true" id="btnsavepass">保存</a>
+				<a class="easyui-linkbutton" iconCls="icon-cancel"  plain="true" id="btncancelpass">删除</a>
+			</div>
+			<form id="frm_editpass" method="post"> 
+			<div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">电子邮件:</label>
+	           		<input id="txtemail2"  name="email" style="width:30%;" class="easyui-textbox" data-options="required:true,readonly:true,validType:'email'" >
+	       </div>
+	         <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">当前密码:</label>
+	           		<input id="txtoldpass"  name="oldpass" style="width:30%;" >
+	       </div>
+	         <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">新密码:</label>
+	           		<input id="txtnewpass"  name="newpass" style="width:30%;" >
+	       </div>
+	         <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">重输密码:</label>
+	           		<input id="txtnewpass2"  style="width:30%;"  >
+	       </div>
+	       </form>
+	</div>
+</div>
+
+<script type="text/javascript" src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/easyui1-5/extend_valibdate.js"></script>
+<script type="text/javascript" src="admin/js/jquery.ajaxfileupload.js"></script>
+<script type="text/javascript" src="admin/js/do_upload_pdf.js"></script>
+<script type="text/javascript" src="admin/js/editinfo/main.js"></script>
+<script type="text/javascript" src="admin/js/editinfo/password.js"></script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin index</title>
+<base href="http://localhost:8080/Membership/">
+<link rel="stylesheet" type="text/css"
+	href="admin/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="admin/easyui1-5/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css"
+	href="admin/easyui1-5/themes/icon.css">
+<!--<link rel="stylesheet" type="text/css" href="admin/themes/demo.css">-->
+<link rel="stylesheet" type="text/css" href="admin/css/style.css">
+<script type="text/javascript" src="admin/js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+	src="admin/js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="admin/js/handle_session.js"></script>
+<script type="text/javascript"
+	src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/js/viaView.js"></script>
+<script type="text/javascript" src="admin/js/extra_new.js"></script>
+<script type="text/javascript" src="admin/js/loading_ajax.js"></script>
+<script type="text/javascript" src="admin/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="admin/js/index.js"></script>
+<style>
+#llefts {
+	float: left;
+}
+
+#rrights {
+	float: right;
+}
+
+#desl1 li {
+	float: none;
+	list-style-type: none;
+	margin: 12px;
+}
+
+.tb_padding {
+	margin: 0 auto;
+}
+
+.tb_padding td {
+	padding: 10px;
+}
+</style>
+</head>
+<body class="easyui-layout layout panel-noscroll" style="width: 100%;">
+	<header style="height: 110px;">
+		<div id="llefts">
+			<img src="admin/image/vivlogo.jpg">
+		</div>
+		<div id="rrights">
+
+			<ul id="desl1">
+				<li id="lidate">Ngày: 11-8-2016</li>
+				<li id="liuser">Chào: ADMIN</li>
+				<li><a id="idbtnlogout" href="javascript:void(0);"
+					class="easyui-linkbutton" data-options="iconCls:'icon-undo'">Thoát</a></li>
+			</ul>
+		</div>
+
+	</header>
+	<div style="margin: 20px 0;"></div>
+	<div id="cclayout" class="easyui-layout" style="width: 100%;">
+
+		<div data-options="region:'west',split:true" title="Chức năng"
+			style="width: 20%;">
+			<ul id="menutree">
+
+			</ul>
+		</div>
+		<div data-options="region:'center',border:false"
+			id="main_body_content"></div>
+		<div
+			data-options="region:'south',title:'South Title',split:false,hideCollapsedContent:true"
+			style="height: 10px;">sdsd</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+			
+</script>
+</html>

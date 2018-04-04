@@ -1,0 +1,81 @@
+
+<div id="tt" class="easyui-tabs" style="width:100%;">
+	<div title="Requirements" style="padding:5px;">
+	<table id="iddatagrip" style="width:100%;"></table>	
+			<div id="tbar" style="padding:5px;height:auto">
+				    <div style="margin-bottom:5px">
+				        <a id="idadd" class="easyui-linkbutton" iconCls="icon-add" plain="true">Add</a>
+				        <a id="idedit" class="easyui-linkbutton" iconCls="icon-edit" plain="true">Edit</a>
+				        <a id="idremove" class="easyui-linkbutton" iconCls="icon-remove" plain="true">Remove</a>
+				         <a id="btnvisible"  class="easyui-linkbutton" iconCls="icon-lock" plain="true">Visibled</a> 
+						<a id="btnunvisible"  class="easyui-linkbutton" iconCls="icon-unlock" plain="true">UnVisibled</a>
+				    </div>
+				    <div>
+				       <input id="ss" style="width:350px"></input>
+				       <div id="mm" style="width:170px">
+						
+						</div>
+				    </div>
+				</div>
+		
+	</div> <!-- end tab1 -->
+	 
+	<div title="Add/Edit" style="padding:5px;">
+		<div style="padding:5px;background:#fafafa;width:99%;border:1px solid #ccc">
+					<a id="menu_save" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-save">Save</a>
+					<a id="menu_add" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-add">New Requirement</a>
+					<a id="menu_reload" href="javascript:void(0)" class="easyui-linkbutton" plain="true" iconCls="icon-reload">Reload</a>
+				
+			</div>
+		
+	       
+		<form method="post" id="form_Requirements">
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">Limit Price:</label>
+	           		<input id="idproduct_price_limit"  name="product_price_limit" style="width:30%;" class="easyui-numberbox" 
+	           		data-options="required:true,validType:{length:[0,12]},min:0,groupSeparator:'.'" 
+	           		 data-ptype="A" data-Requirementsid="0">
+	           		 <a id="id_btn1_view_img" class="easyui-linkbutton">View image</a>
+	           		 <input type="hidden" name="ptype" value="A">
+	           		  <input type="hidden" name="requirement_id" value="0">
+	           		 <input type="hidden" id="idRequirementsimg" name="product_image" value='' >
+	       </div>
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">Quantity:</label>
+	           		<input id="idquantity"  name="quantity" style="width:30%;" class="easyui-numberbox" data-options="required:true,validType:{length:[0,12]},min:0,groupSeparator:'.'" >
+	       </div>
+	       <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">Budget:</label>
+	           		<input id="idbudget" name="budget"  style="width:30%;" class="easyui-numberbox" data-options="required:true,validType:{length:[0,12]},min:0,groupSeparator:'.'" >
+	       </div>
+	       <div>
+	        <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       <label class="textbox-label textbox-label-top" style="text-align: left;">Description:</label>
+	       		<textarea id="my_editor_description" name="description" style="width:30%;height:120px"></textarea>
+	       		</div>
+	       </div>
+	      </form> 
+	<div id="dialog_Requirements_img" >
+		<div style="margin:0;padding:20px 50px">
+					
+					<div style="margin-bottom:10px;text-align:center;">
+						<img  src="upload/no_image.jpg" style="width:100px;heght:100px"/>
+					</div>
+					<div style="margin-bottom:10px">
+				 		<input  class="easyui-filebox"  name="donewsimg"  id="donewsimg"  data-options="prompt:'Upload image...'" style="width:100%">
+					</div>
+			</div>		
+	</div>	
+	 	
+	</div> <!--	end tab2 -->
+	
+	
+</div>		<!-- end main -->
+			  
+<!-- tab1 -->
+<script type="text/javascript" src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/js/jquery.ajaxfileupload.js"></script>
+<script type="text/javascript" src="admin/js/requirements/main.js"></script>
+<!-- tab12 -->
+ <script type="text/javascript" src="admin/js/requirements/add_edit_Requirements.js"></script> 
+

@@ -1,0 +1,19 @@
+
+
+<div style="float:left;width:50%;padding-left:50px;">
+	<form method="post">
+		<input type="hidden" value="@nation_id_value" name="nation_id">
+        <div style="margin-bottom:5px">
+            <input class="easyui-textbox"  data-options="required:true" value="@nation_name_value" name="nation_name" label="Nation Name:" labelPosition="top" style="width:100%;">
+        </div>
+         <div style="margin-bottom:5px">
+            <input class="easyui-textbox"  data-options="required:true" value="@lang_code_value" name="lang_code" label="Lang Code:" labelPosition="top" style="width:100%;">
+        </div>
+    </form>    
+        <div style="text-align:center">
+            <a  class="easyui-linkbutton"   iconCls="icon-save"  onclick="save1(this)">Save</a>
+            <a  class="easyui-linkbutton"   iconCls="icon-cancel" onclick="cancel1(this)">Cancel</a>
+        </div>
+</div>
+
+

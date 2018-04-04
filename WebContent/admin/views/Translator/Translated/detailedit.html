@@ -1,0 +1,144 @@
+	<div style="padding:5px;background:#fafafa;width:99%;border:1px solid #ccc">
+			<a class="easyui-linkbutton" iconCls="icon-save" id="submit_@id" plain="true">Save</a>
+		<a class="easyui-linkbutton" iconCls="icon-cancel"  id="cancel_@id" plain="true">Cancel</a>
+	</div>
+
+	<div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">User translated :</label>
+	         <input id="usertrans_@id"   style="width:40%;" class="easyui-textbox" data-options="readonly:true" >
+	   </div>
+		
+	<div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">Product ID :</label>
+	         <input id="productid_@id"   style="width:40%;"  value="001" class="easyui-textbox" data-options="readonly:true">
+	   </div>	
+	<div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">Product image :</label>
+	         <input id="productimage_@id"   style="width:40%;"   class="easyui-textbox" data-options="readonly:true" >
+	 </div>	
+	  <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">Product price :</label>
+	         <input id="productprice_@id"   style="width:40%;" class="easyui-numberbox" data-options="readonly:true,required:true,validType:{length:[0,12]},min:0,groupSeparator:'.',prefix:'¥ '" >
+	   </div>
+	
+	 <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">Seller ID :</label>
+	         <input id="seller_@id"   style="width:40%;" class="easyui-textbox" data-options="readonly:true" >
+	   </div>
+ <div style="margin-bottom: 5px ;padding-left: 7px;">
+	       	<label class="textbox-label textbox-label-top" style="text-align: left;">Product name :</label>
+	       <input id="productname_@id"   style="width:40%;" class="easyui-textbox" data-options="readonly:true" >
+	 </div>
+	 <div style="margin-bottom: 5px ;padding-left: 7px;">
+		<label><input type="checkbox" id="editname_@id">Check for edit</label><br>
+		<input type="text" class="form-control" id="areaeditname_@id" style="display:none;width:325px">
+		<div style="width:150px;"><span style="font-weight: bold">Product description : </span></div>
+		<textarea  class="form-control" id="productdes_@id" style="width:800px" readonly></textarea><br>
+		<label><input type="checkbox" id="editdes_@id">Check for translation</label><br>
+		<div>
+		<textarea class="form-control" id="areaeditdes_@id" style="display:none;width:800px"></textarea><br><br>
+		</div>
+	 </div>
+		
+
+<script type="text/javascript">
+$(function(){
+	
+	get_product_info('@id');
+	var is_edit=false;
+	
+	
+	$("#submit_@id").click(function(){
+		
+		
+		
+		
+		var name_trans=$("#productname_@id").textbox('getValue');
+		var des_trans=$("#productdes_@id").val();
+		
+		if($("#editname_@id").is(':checked')){
+			name_trans=$("#areaeditname_@id").val();
+		}
+		if($("#editdes_@id").is(':checked')){
+			des_trans=$("#areaeditdes_@id").val();
+		} 
+		
+		if(name_trans=="" && des_trans==""){
+			$.messager.alert('Warning','Nothing changed !','warning');
+			return;
+		}else if($("#editname_@id").is(':checked') && name_trans==""){
+			$.messager.alert('Warning','Please translate product name !','warning');
+			return;
+		}else if($("#editdes_@id").is(':checked') && des_trans==""){
+			$.messager.alert('Warning','Please translate product des !','warning');
+			return;
+		}
+		else{
+			var pro_id =$("#productid_@id").textbox('getValue');
+			var pro_name = name_trans;
+			var pro_des = des_trans;
+			var pdata=	{'product_id':pro_id,
+						'product_name':pro_name,
+						'product_des':pro_des};
+			
+			extras_POST_json(true,"ad/ProductTransController","update_product_content",pdata,function(data){
+				if(data!=null){
+					var result=data;
+					if(result==0){
+						$.messager.alert('Success','Change success !','Success',function(){
+							$('#tt').tabs('close',$("#productname_@id").textbox('getValue'));
+							location.reload();
+						});
+					}else if(result==-1){
+						$.messager.alert('Warning','Product is not exists','warning');
+					}else if(result==2){
+						$.messager.alert('Warning','SQL error','warning');
+					}else{
+						$.messager.alert('Warning','SQL error','warning');
+					}
+				}
+			});
+		}  
+	}); 
+		$("#cancel_@id").click(function(){
+			$("#areaeditname_@id").val('');
+			$("#areaeditdes_@id").val('')
+			$.messager.alert('Warning','Everything cleared !','warning');
+		});
+	$("#editdes_@id").change(function(){
+		if(this.checked){
+			$("#areaeditdes_@id").css('display','inline');
+				gender_editor();
+		}else{
+			$("#areaeditdes_@id").css('display','none');
+		}
+	});
+	$("#editname_@id").change(function(){
+		if(this.checked){
+			$("#areaeditname_@id").css('display','inline');
+		}else{
+			$("#areaeditname_@id").css('display','none');
+		}
+	})
+	
+	function get_product_info(pro_id){
+		var pdata={'product_id':pro_id};
+		extras_GET_json(true,"ad/ProductTransController","get_product_translated_info",pdata,function(data){
+			if(data!=null){
+				$("#productid_@id").textbox('setValue',data.product_id);
+				$("#productname_@id").textbox('setValue',data.product_name);
+				$("#productimage_@id").textbox('setValue',data.product_image);
+				$("#productprice_@id").numberbox('setValue',data.product_price);
+				$("#seller_@id").textbox('setValue',data.seller_id);
+				$("#productdes_@id").text(data.product_description);
+				$("#usertrans_@id").textbox('setValue',data.user_trans);
+				
+			}
+		});
+	}
+	function gender_editor(){
+		
+	}
+	
+});
+</script>

@@ -1,0 +1,172 @@
+
+<div id="tt" class="easyui-tabs" style="width:100%;">
+	<div title="Location" style="padding:5px;">
+	<table id="iddatagrip" style="width:100%;"></table>	
+			<div id="tbar" style="padding:5px;height:auto">
+				    <div style="margin-bottom:5px">
+				        <a id="idadd" class="easyui-linkbutton" iconCls="icon-add" plain="true">Add</a>
+				        <a id="idedit" class="easyui-linkbutton" iconCls="icon-edit" plain="true">Edit</a>
+				        <a id="idremove" class="easyui-linkbutton" iconCls="icon-remove" plain="true">Remove</a>
+				         <a id="btnvisible"  class="easyui-linkbutton" iconCls="icon-lock" plain="true">Visibled</a> 
+						<a id="btnunvisible"  class="easyui-linkbutton" iconCls="icon-unlock" plain="true">UnVisibled</a>
+				    </div>
+				    <div>
+				       <input id="ss" style="width:350px"></input>
+				       <div id="mm" style="width:170px">
+						
+						</div>
+				    </div>
+				</div>
+	</div> <!-- end tab1 -->
+
+	<div title="Add/Edit" style="padding:5px;">
+	    	  <div style="    margin-bottom: 7px ;padding-left: 7px;">
+	       		<label class="textbox-label textbox-label-top" style="text-align: left;">City:</label>
+	            <input  id="cc_city" style="width:20%;">  
+	            <a id="id_btn1_addnew_city" class="easyui-linkbutton">Add new City</a>
+	         
+	       </div>
+	       
+		   <div style="padding:7px;" id="idclosedg">
+		   			<div id="dg" style="width:60%"></div>
+				   <div id="tbar_tab2" style="padding:5px;height:auto">
+								    <div style="margin-bottom:5px">
+								        <a id="idappend_tab2" class="easyui-linkbutton" iconCls="icon-add" plain="true">Append</a>
+								        <a id="idremove_tab2" class="easyui-linkbutton" iconCls="icon-remove" plain="true">Remove</a>
+								    </div>
+					</div>
+		   </div>
+	<div id="dialog_ae_city" >
+		<form id="fm_city" method="post" novalidate style="margin:0;padding:20px 50px">
+			<div style="margin-bottom:20px;font-size:14px;border-bottom:1px solid #ccc">City</div>
+				<input type="hidden" name="ptype" value='A' >
+				<input type="hidden" name="cityid" value='0' >
+			<div style="margin-bottom:10px">
+				<input  id="idfm_cityname" name="cityname" class="easyui-textbox" required="true"  labelPosition="top" label="City Name:" style="width:100%">
+			</div>
+			
+		</form>
+	</div>	
+				
+	
+					
+		
+	</div>	<!-- end tab2 --> 	
+</div>		<!-- end main -->
+			  
+<!-- tab1 -->
+<script type="text/javascript" src="admin/easyui1-5/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="admin/easyui1-5/datagrid-detailview.js"></script>
+<script type="text/javascript" src="admin/easyui1-5/datagrid-groupview.js"></script>
+<script type="text/javascript" src="admin/js/location/main.js"></script>
+<!-- tab2-->
+
+
+<script type="text/javascript" src="admin/js/location/dialog_addUpdate_city_district.js"></script>
+<script type="text/javascript" src="admin/js/location/combogrid_city_district.js"></script>
+<script type="text/javascript" src="admin/js/location/crud_grid.js"></script>
+<script type="text/javascript">
+function save1(target){
+    var tr = $(target).closest('.datagrid-row-detail').closest('tr').prev();
+    var index = parseInt(tr.attr('datagrid-row-index'));
+    saveItem(index);
+}
+function cancel1(target){
+    var tr = $(target).closest('.datagrid-row-detail').closest('tr').prev();
+    var index = parseInt(tr.attr('datagrid-row-index'));
+    //console.log(index)
+    cancelItem(index);
+}
+function cancelItem(index){
+	var row = $('#dg').datagrid('getRows')[index];
+	if (row.isNewRecord){
+		$('#dg').datagrid('deleteRow',index);
+	} else {
+		$('#dg').datagrid('collapseRow',index);
+	}
+}
+function saveItem(index){
+	var type='A';
+	var district= $("#cc_city").combogrid('getValue');
+	var row = $('#dg').datagrid('getRows')[index];
+	if(row.isNewRecord ){
+		 type='A';
+		
+	}else{
+		 type='E';
+	}
+	var url = extras_Hosting["tomcatSpring_context"]
+				+'ad/locationController/add_update_location'
+				+'?ptype='+type+'&parent='+district;
+	$('#dg').datagrid('getRowDetail',index).find('form').form('submit',{
+		url: url,
+		onSubmit: function(){
+			return $(this).form('validate');
+		},
+		success: function(result){
+			/*data = eval('('+data+')');
+			data.isNewRecord = false;
+			$('#dg').datagrid('collapseRow',index);
+			$('#dg').datagrid('updateRow',{
+				index: index,
+				row: data
+			});*/
+			var data=JSON.parse(result);
+	        $.messager.alert('Info', data.message, 'info');
+	    	$('#dg').datagrid('clearChecked');
+	    	$('#dg').datagrid('reload');
+		}
+	});
+}
+
+
+/*$('#cc_city').combogrid formater ACtion edit delete*/
+var check_action_click_cc_city=false;
+var check_action_click_cc_district=false;
+
+function editrow_city(target){
+	check_action_click_cc_city=true;
+	var index=target;
+	var row=$('#cc_city').combogrid('grid').datagrid('getRows')[index];
+	if(row){
+		//alert(row.id+"_"+row.property_name+"_"+row.product_type_sub_id);
+		$('#dialog_ae_city').dialog('open').dialog('center').dialog('setTitle','Edit City '+ row.location_id);
+		$('#fm_city').form('clear');
+		$('#fm_city').find('input[name=ptype]').val('E');
+		$('#fm_city').find('input[name=cityid]').val(row.location_id);
+		$('#idfm_cityname').textbox('setValue',row.location_name);
+		  $('#dg').datagrid('clearSelections');
+   		  $('#dg').datagrid("loadData",[]);
+	}else{
+		$.messager.alert('Warning','Select City please!','warning');
+	}
+}	
+function deleterow_city(target){
+	check_action_click_cc_city=true;
+	var index=target;
+	var row=$('#cc_city').combogrid('grid').datagrid('getRows')[index];
+	if(row){
+		  $('#dg').datagrid('clearSelections');
+   		  $('#dg').datagrid("loadData",[]);
+		$.messager.confirm('Confirm','Are you sure you want to delete city "'+row.location_name+'"?',function(r){
+		    if (r){
+		    	var city="'"+row.location_id+"'";
+		    	var pdata={"strthanhpho":city,"strquan":"","strphuong":""};
+		    	var url= extras_Hosting["tomcatSpring_context"]+"ad/locationController/delete_multi_location";
+		    	 extras_POST_json(true,"ad/locationController","delete_multi_location",pdata,function(data){
+			        	$.messager.alert('Result',data.message);
+			        	if(data.f=="0"){
+			    			$('#cc_city').combogrid('grid').datagrid('deleteRow',index);
+			    			$('#iddatagrip').datagrid('clearChecked');
+							$('#iddatagrip').datagrid('reload');
+			        	}
+			        });     
+		    }
+		});
+	}else{
+		$.messager.alert('Warning','Select City please!','warning');
+	}
+}	
+</script>
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" charset="utf-8" src="js/extra.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/extra.js"></script>  
+<title>Confirm template</title>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="content" class="container" style="padding-left:300px;">
+	<table style="border: 1px solid;text-align:left;width:600px;margin:25px">
+		<thead>
+			<tr>
+				<td colspan="2">
+					<img class="CToWUd" style="border:none;outline:none;text-decoration:none;display:inline;min-height:auto" src="http://vivmall.vn/image/vivlogo.jpg" alt="Logo">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="line-height:30px;background-color:green;color:white;text-align:center">
+					KÍCH HOẠT ĐĂNG KÝ TÀI KHOẢN
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding:20px 15px;"><span><b>Xin chào <span id="name1"></span> !</b></span>
+					<br>
+					<br>
+					<span>Chúng tôi đã nhận được yêu cầu mở tài khoản của bạn tại Vivmall.vn với thông tin như sau</span>
+					<br>
+					</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<table style="border-top:1px solid gray;border-bottom:1px solid gray;width:100%;">
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Tên chủ tài khoản</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span id="name2"><b></b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Địa chỉ email</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span id="email"><b></b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Password</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span id="pass"><b></b></span><br></td>
+					</tr>
+					<tr>
+					<td style="width:40%;padding: 5px 15px; text-align:right;opacity:0.4"><span>Shop name</span><br></td>
+					<td style="width:60%;padding: 5px 15px; text-align:left"><span id="name3"><b></b></span><br></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" >
+							<div class="row">
+								<div class="col-md-12">
+										<label style="color: #333333;font-size:13px;" id="content_confirm">
+										<a href=""></a></label>
+									</div>
+							
+							</div>		
+				</td>
+			</tr>
+		</thead>
+	</table>
+	</div>
+	<div id="footer"></div>
+</body>
+<script>
+$(function() {
+	
+	exe_load_header(function(out){
+	})
+	confirm_create_shop();
+
+	function confirm_create_shop(){
+		var email = getUrlParameter('email');
+		if(email==undefined || email ==""){
+			return;
+		}
+		var pdata = {
+				'email':email				
+			};
+			Return_get("CustomerController","get_info_customer",pdata,"GET",function(data){
+				if(data!=null){
+					$("#name1").text(data.shop_name);
+					$("#name2").text(data.shop_name);
+					$("#name3").text(data.shop_name);
+					$("#email").text(data.email);
+					$("#pass").text(data.pass);
+					$("#url").text(data.shop_url);
+
+				}
+			});
+			Return_get('CustomerController','confirm_create_shop',pdata,'GET',function(data){
+				
+				if(data!=null){				
+					$("#content_confirm a").attr("href","");
+					var error = data.result;
+					if(error==2){	
+						$("#content_confirm").text('Không tồn tại email');
+					}
+					else if(error==3){	
+						$("#content_confirm").text('Tài khoản đã được xác nhận, không thể xác nhận');
+					}
+					else if(error==1){	
+						$("#content_confirm").text('Xác nhận không thành công');
+					}
+					else if(error==0){	
+						$("#content_confirm").text('Xác nhận tài khoản thành công');
+					}
+					else{
+						$("#content_confirm").text('Xác nhận tài khoản không thành công');
+					}
+				}
+			});
+	}
+});
+</script>
+</html>

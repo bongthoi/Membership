@@ -1,0 +1,31 @@
+$(function(){
+	$("#myModal_master").data("backdrop","static").modal('show');
+	$("#C_msigin").show();
+	$("#C_forgetpass").hide();
+	$("#C_register").hide();
+	$("#idsignin").click(function(){
+		$("#myModal_master").data("backdrop","static").modal('show');	
+		$("#C_msigin").show();
+		$("#C_forgetpass").hide();
+		$("#C_register").hide();
+	});
+	$("#idregister").click(function(){
+		$("#myModal_master").data("backdrop","static").modal('show');	
+		$("#C_msigin").hide();
+		$("#C_forgetpass").hide();
+		$("#C_register").show();
+	});
+	$("#btn_forget_pass").click(function(){
+		$("#myModal_master").data("backdrop","static").modal('show');
+		$("#C_msigin").hide();
+		$("#C_forgetpass").show();
+		$("#C_register").hide();
+	});
+	$("#btn_register_pop").click(function(){
+		$("#myModal_master").data("backdrop","static").modal('show');
+		$("#C_msigin").hide();
+		$("#C_forgetpass").hide();
+		$("#C_register").show();
+		
+	});
+});

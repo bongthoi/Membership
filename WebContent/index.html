@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title class="opso_language" data_opso="data_file:index,data_key:r1"></title>
+
+<!-- Bootstrap Core CSS -->
+<link href="shop.vivmall/vendor/bootstrap/css/bootstrap.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" />
+<link href="css/custom_input_file.css" rel="stylesheet" />
+<!-- Custom Fonts -->
+<link href="shop.vivmall/vendor/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+	rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Kaushan+Script'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'
+	rel='stylesheet' type='text/css'>
+<link
+	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Theme CSS -->
+<link href="shop.vivmall/css/agency.css" rel="stylesheet">
+<link href="shop.vivmall/css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top" class="index" >
+	<div id="body">
+		
+	
+	<!-- Navigation -->
+	<nav id="mainNav"
+		class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i
+						class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="http://vivmall.vn"> <img
+					src="shop.vivmall/img/vivmall.png"
+					style="height: 70px; float: left;"> Vivmall.vn
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="page-scroll opso_language" href="#contact" data_opso="data_file:index,data_key:r2"></a></li>					
+					<li class=""><a style="cursor:pointer" id="idsignin" class="opso_language" data_opso="data_file:index,data_key:r50"></a></li>
+					<li class=""><a style="cursor:pointer" id="idregister" class="opso_language" data_opso="data_file:index,data_key:r51"></a></li>
+				</ul>				
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<!-- Header -->
+	<header>
+		<div class="top-content">
+
+			<div class="inner-bg">
+				<img src="shop.vivmall/img/matching2.png" />
+			</div>
+
+		</div>
+	</header>
+
+
+
+
+
+	<!-- Contact Section -->
+	<section id="contact" style="text-align:left;">
+		<div class="container">
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="section-heading opso_language" data_opso="data_file:index,data_key:r26"></h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<form  id="contactForm" method="post">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group"> 
+										<input type="text" class="form-control opso_placeholder" data_opso="data_file:index,data_key:r27"
+											placeholder="" id="txtemail" name="txtemail">
+										
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control opso_placeholder" data_opso="data_file:index,data_key:r28"
+											placeholder="" id="txtfullname" name="txtfullname">
+									</div>
+
+									<div class="form-group">
+										<input type="text" class="form-control opso_placeholder" data_opso="data_file:index,data_key:r29"
+											placeholder="" id="txtphone" name="txtphone">
+										
+									</div>
+
+									<div class="form-group">
+										<div class="row">
+											<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+												<input type="text" class="form-control opso_placeholder" id="txtcapchar" name="txtcapchar" data_opso="data_file:index,data_key:r30"
+													placeholder="">
+													<label id="lberrorcapchar" class="error" for="txtcapchar" style="display:none;"></label>
+													 
+
+											</div>
+											<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+												<div id="captcha" style="text-align: left">
+													<img style="height: 30px; width: 100%;" />
+
+												</div>
+
+											</div>
+											<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+												<img src="img/icon_refresh.png" id="btnrefresh"
+													style="cursor: pointer; height: 30px;">
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control opso_placeholder" data_opso="data_file:index,data_key:r31"
+											placeholder="" id="txttitle" name="txttitle">
+										
+									</div>
+									<div class="form-group">
+										<textarea class="form-control opso_placeholder"  placeholder="" data_opso="data_file:index,data_key:r32"
+											id="txtcontent"></textarea>
+										<p class=" text-danger"></p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-lg-12 text-center">
+									<div id="success"></div>
+									<button type="button" class="btn btn-xl opso_language" id="btnsend" data_opso="data_file:index,data_key:r33"></button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h3 class="section-heading opso_language"  data_opso="data_file:index,data_key:r34"></h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<p style="color: white;">
+							<span class="opso_language" data_opso="data_file:index,data_key:r35"></span>
+							<br>
+							<span class="opso_language" data_opso="data_file:index,data_key:r36"></span> 
+							<br>
+							<span class="opso_language" data_opso="data_file:index,data_key:r37"></span> 
+							<br>
+							 Email: contact@vivmall.vn<br>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="copyright">版权 &copy; Vinh Sang 2016</span>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline social-buttons">
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Portfolio Modals -->
+	<!-- Use the modals below to showcase details about your portfolio projects! -->
+	<div class="portfolio-modal modal fade" id="myModal_master" tabindex="-1"
+		role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<div class="container" id="C_msigin">					
+					<div class="row">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<div class="form-box">
+								<div class="close-modal"  data-dismiss="modal">
+									<div class="close_btn">
+										<img src="shop.vivmall/img/closebtn.jpg"/>										
+									</div>
+								</div>
+								<div class="form-top">
+									<div class="form-top-left">
+										<h4 style="color: black;" class="opso_language" data_opso="data_file:index,data_key:r4"></h4>
+										<p class="opso_language" data_opso="data_file:index,data_key:r5"></p>
+									</div>
+									<div class="form-top-right">
+										<i class="fa fa-lock"></i>
+									</div>
+								</div>
+								<div class="form-bottom">
+									<form role="form" action="" method="post" class="login-form">
+										<div class="form-group">
+											<label class="sr-only opso_language " for="form-username"  data_opso="data_file:index,data_key:r6"></label>
+											 <input	name="form-username"  data_opso="data_file:index,data_key:r7" placeholder=""
+												class="form-username form-control opso_placeholder" id="email" type="text">
+										</div>
+										<div class="form-group">
+											<label class="sr-only opso_language" for="form-password" data_opso="data_file:index,data_key:r8"></label>
+											 <input	name="form-password" placeholder=""
+											 	data_opso="data_file:index,data_key:r9"
+												class="form-password form-control opso_placeholder" id="password"
+												type="password">
+										</div>
+										<div class="form-group"
+											style="font-weight: bold; text-align: right">
+											<a style="cursor:pointer;" id="btn_forget_pass"	 data-backdrop="static" class="opso_language" data_opso="data_file:index,data_key:r10"></a>
+											<a style="cursor:pointer;" id="btn_register_pop"	 data-backdrop="static" class="opso_language" data_opso="data_file:index,data_key:r51"></a>
+										</div>
+
+										<button type="button" class="btn" id="btnlogin" >
+											<span class="opso_language" data_opso="data_file:index,data_key:r4"></span>
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!-- end  C_msigin-->
+					<div class="container" id="C_forgetpass">
+					<div class="row" >
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<div class="modal-header"
+									style="background-color: #39792f; color: white;">
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true" style="font-size: 30px;">&times;</span>
+									</button>
+									<h4 class="modal-title opso_language" id="myModalLabel" data_opso="data_file:index,data_key:r44">
+									</h4>
+								</div>
+								<div class="modal-body">
+									<div class="form-bottom">
+										<form role="form" action="" method="post" class="">
+											<div class="row ">
+												<div class="col-md-12">
+													<label style="color: #333333" class="opso_language" 
+													data_opso="data_file:index,data_key:r6"></label>
+												</div>
+											</div>
+											<div class="row ">
+												<div class="col-md-12">
+													<input type="text" class="form-control opso_placeholder" id="txtemail_forgot"
+														data_opso="data_file:index,data_key:r45"
+														style="color: rgb(0, 0, 0);" placeholder="">
+													<label id="lbemail_forgot" class="lberror"
+														style="color: rgb(255, 0, 0);"></label>
+												</div>
+											</div>
+											<div class="row" style="text-align: center; margin-top: 10px;">
+												<div class="col-md-12">
+													<button type="button" class="btn opso_language" id="btnforget"
+													 data_opso="data_file:index,data_key:r46"></button>
+												</div>
+											</div>
+										</form>
+									</div>
+				
+								</div>
+						</div>
+					</div>
+				</div><!-- end C_forgetpass  -->
+				
+					<div class="container" id="C_register">
+					<div class="row">
+						<div class="col-sm-3"></div>
+						<div class="col-sm-6">
+							<div class="form-box">
+								<div class="close-modal"  data-dismiss="modal">
+									<div class="close_btn">
+										<img src="shop.vivmall/img/closebtn.jpg"/>										
+									</div>
+								</div>
+								<div class="form-top">
+									<div class="form-top-left">
+										<h4 style="color: black;" class="opso_language" data_opso="data_file:index,data_key:r11"></h4>
+
+									</div>
+									<div class="form-top-right">
+										<i class="fa fa-pencil"></i>
+									</div>
+								</div>
+								<div class="form-bottom">
+									<form role="form"  method="post" id="frm-regiterfix"
+										class="registration-form">
+										<div class="row_m">
+
+											<input placeholder="" class="form-email form-control opso_placeholder" data_opso="data_file:index,data_key:r7"
+												id="txtemail_regis" name="txtemail_regis" type="text"> 
+										</div>
+										<div class="row_m">
+
+											<input placeholder=""
+												class="form-password form-control opso_placeholder" id="txtpassword1_regis" name="txtpassword1_regis" data_opso="data_file:index,data_key:r9"
+												type="password"> 
+										</div>
+										<div class="row_m">
+
+											<input placeholder=""
+												class="form-password form-control opso_placeholder" id="txtpassword2_regis" name="txtpassword2_regis"  data_opso="data_file:index,data_key:r12"
+												type="password"> 
+										</div>
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder" data_opso="data_file:index,data_key:r15"
+												type="text" id="txtshopname_regis" name="txtshopname_regis">
+										</div>
+										
+										<div class="row_m" id="distpicker_e">
+										<div class="form-group">
+										<select data-province="---- 选择省 ----" id="slprovince" class="form-control" style="width:auto;    display: inline;"></select>
+										 <select data-city="---- 选择市 ----" id="slcity" class="form-control" style="width:auto;    display: inline;"></select>
+										<select data-district="---- 选择区 ----"id="sldistrict" class="form-control" style="width:auto;    display: inline;"></select>	
+											
+												<label id="lbdistpicker_e-error" class="error"  style="display:none"></label>
+										</div>								
+										</div>
+										
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder" data_opso="data_file:index,data_key:r16"
+												type="text" id="txt_address_regis" name="txt_address_regis"> 
+										</div>
+										
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder"  data_opso="data_file:index,data_key:r19"
+												type="text" id="txtphone_regis" name="txtphone_regis"> 
+										</div>
+										
+										
+										<div class="row_m">
+											<label class="control-label opso_language" style="color: black"  data_opso="data_file:index,data_key:r24"></label> 
+											<span class="btn btn-primary btn-file " >
+												<span class="opso_language" data_opso="data_file:index,data_key:r18"></span>
+												<input type="file" name="txt_license">
+											</span>  <input type="hidden" id="id_upload_success_license"> <br>
+											<strong id="id_upload_success_license_strong_message" style="color: red"></strong>
+										</div>
+										<div class="form-group row_m">
+											<div class="row">
+												<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+													<input type="text" class="form-control"
+														id="txtcapchar_regis" placeholder="验证码" name="txtcapchar_regis">
+														<label id="txtcapchar_regis-error" class="error" for="txtcapchar_regis" style="display:none"></label>
+												</div>
+												<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+													<div id="captcha_r" style="text-align: left">
+														<img style="height: 30px; width: 100%;" />
+													</div>
+												</div>
+												<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+													<img src="img/icon_refresh.png" id="btnrefresh_r"
+														style="cursor: pointer; height: 30px;">
+												</div>
+											</div>
+
+
+										</div>					
+										<span id="erorr_register" style="color: red"></span>
+											<button type="button" class="btn opso_language" id="btnregister" data_opso="data_file:index,data_key:r25"></button>
+										</form>
+									
+									
+								</div>
+							</div>
+					</div>
+				</div>
+			</div><!-- end C_register -->				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+	</div><!-- end modal master -->
+
+
+	<!-- jQuery -->
+	<script src="shop.vivmall/vendor/jquery/jquery.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/additional-methods.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="shop.vivmall/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	<!-- Contact Form JavaScript -->
+	<script src="shop.vivmall/js/jqBootstrapValidation.js"></script>
+	<script src="shop.vivmall/js/contact_me.js"></script>
+
+	<!-- Theme JavaScript -->
+	<script src="shop.vivmall/js/agency.min.js"></script>
+
+
+	<div
+		style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; height: 100%; width: 100%; z-index: -999999; position: fixed; text-align:center;"
+		class="backstretch">
+		<img src="shop.vivmall/img/header-bg.jpg"
+			style="position: absolute; margin: 0px; padding: 0px; border: medium none; width: 100%; z-index: -999999; left: 0px; top: -199px; filter: blur(4px);">
+	</div>
+
+<!-- Portfolio Modal 1 -->
+	<div class="portfolio-modal modal fade" id="myModal" tabindex="-1"
+		role="dialog" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">			
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2">
+							<div class="modal-body">
+								<!-- Project Details Go Here -->
+								<table	style="text-align: left; width: 100%">
+									<thead style="border: 1px solid; ">
+										<tr>
+											<td colspan="2"><img class="CToWUd"
+												style="border: none; outline: none; text-decoration: none; display: inline; min-height: auto"
+												src="http://vivmall.vn/image/vivlogo.jpg" alt="Logo">
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2"
+												style="line-height: 30px; background-color: green; color: white; text-align: center">
+												<span class="opso_language" data_opso="data_file:index,data_key:r38"></span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2" style="padding: 20px 15px; color: black;"><span>
+													<b><span class="opso_language" data_opso="data_file:index,data_key:r39"></span><span id="name1_cofirm"></span> !
+												</b>
+											</span> <br>
+											 <span class="opso_language" data_opso="data_file:index,data_key:r40"></span> <br>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table
+													style="border-top: 1px solid gray; border-bottom: 1px solid gray; width: 100%; color: black;">
+													<tr>
+														<td
+															style="width: 40%; padding: 5px 15px; text-align: right; opacity: 0.8">
+															<span class="opso_language" data_opso="data_file:index,data_key:r48"></span><br></td>
+														<td
+															style="width: 60%; padding: 5px 15px; text-align: left"><span
+															id="name2_cofirm"><b></b></span><br></td>
+													</tr>
+													<tr>
+														<td
+															style="width: 40%; padding: 5px 15px; text-align: right; opacity: 0.8">
+															<span class="opso_language" data_opso="data_file:index,data_key:r6"></span><br></td>
+														<td
+															style="width: 60%; padding: 5px 15px; text-align: left"><span
+															id="email_cofirm"><b></b></span><br></td>
+													</tr>
+													<tr>
+														<td
+															style="width: 40%; padding: 5px 15px; text-align: right; opacity: 0.8">
+															<span class="opso_language" data_opso="data_file:index,data_key:r8"></span><br></td>
+														<td
+															style="width: 60%; padding: 5px 15px; text-align: left"><span
+															id="pass_cofirm"><b></b></span><br></td>
+													</tr>
+													<tr>
+														<td
+															style="width: 40%; padding: 5px 15px; text-align: right; opacity: 0.8">
+															<span class="opso_language" data_opso="data_file:index,data_key:r42"></span><br></td>
+														<td
+															style="width: 60%; padding: 5px 15px; text-align: left"><span
+															id="name3_cofirm"><b></b></span><br></td>
+													</tr>													
+												</table>
+											</td>
+										</tr>
+
+										<tr>
+											<td colspan="2" style="padding: 20px 15px; color: black;">
+												<div class="row">
+													<div class="col-md-12">
+														<label style="color: #333333; font-size: 20px;"
+															id="content_confirm"> <a href=""></a></label>
+													</div>
+
+												</div>
+											</td>
+										</tr>										
+									</thead>
+									<tfoot>
+										<tr>
+											<td colspan="2">
+												<div class="row" style="margin-top:10px;">
+													<div class="col-md-12" style="text-align: right">
+														<button type="button" class="btn btn-primary opso_language"
+																data-dismiss="modal" data_opso="data_file:index,data_key:r43"></button>
+													</div>
+
+												</div>
+											</td>
+										</tr>
+									</tfoot>
+								</table>						
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+<!-- Modal -->
+	<div class="modal fade" id="myModal_change_password" tabindex="-1"
+		role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header"
+					style="background-color: #39792f; color: white;">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true" style="font-size: 30px;">&times;</span>
+					</button>
+					<h4 class="modal-title opso_language" id="myModalLabel"
+					 data_opso="data_file:index,data_key:r47"></h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-bottom">
+						<form role="form" action="" method="post" class="">
+							<div class="row ">
+								<div class="col-md-12">
+									<label style="color: #333333" id="content_confirm_change_pass"></label>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="dialogmanual" style="display: none; text-align: left">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="content_message" style="color: black; font-size: 15px;"></div>
+			</div>
+		</div>
+	</div>
+</div>
+	<script src="js/distpicker.data.js"></script>
+	<script src="js/distpicker.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/blockUI.js"></script>
+	<script src="js/extrablock.js"></script>	
+	<script src="js/extra.js"></script>
+	<script src="js/js.cookie.js"></script>
+	<script src="js/language.js"></script>
+	<script src="js/client/default.js"></script>
+	<script src="js/dialog.js"></script>	
+	<script src="js/jquery.ajaxfileupload.js"></script>
+	<script src="js/client/do_upload_pdf.js"></script>
+	<script src="js/client/register_fix.js"></script>	
+	<script src="js/client/login.js"></script>
+	<script src="js/client/contact_fix.js"></script>
+	<script src="js/client/forgetpassword.js"></script>
+	<script src="js/client/cofirm_register.js"></script>
+	<script src="js/client/change_password.js"></script>
+
+</body>
+
+</html>

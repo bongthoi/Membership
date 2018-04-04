@@ -1,0 +1,59 @@
+<div class="row_m">
+											<label class="control-label opso_language" style="color: black" data_opso="data_file:index,data_key:r17"></label> 
+											<span class="btn btn-primary btn-file ">
+												<span class="opso_language" data_opso="data_file:index,data_key:r18"></span>
+												<input	type="file" name="txt_picture_company">
+											</span> <input type="hidden" id="id_upload_success_picture_company"> <br>
+											<strong id="id_upload_success_picture_company_strong_message" style="color: red"></strong>
+										</div>
+										<div class="row_m">
+
+											<select class="form-control" id="nation"></select>
+										</div>										
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder"  data_opso="data_file:index,data_key:r19"
+												type="text" id="txtphone_regis"> <span
+												id="lbphone_regis" style="color: red"></span>
+										</div>
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder" data_opso="data_file:index,data_key:r20"
+												type="text" id="txt_year_es_regis"> <span
+												id="lb_year_es_regis" style="color: red"></span>
+										</div>
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder" data_opso="data_file:index,data_key:r21"
+												type="text" id="txt_total_employ_regis"> <span
+												id="lb_total_employ_regis" style="color: red"></span>
+										</div>
+										<div class="row_m">
+
+											<input placeholder="" class=" form-control opso_placeholder" data_opso="data_file:index,data_key:r22"
+												type="text" id="txt_total_revenue_regis"> <span
+												id="lb_total_revenue_regis" style="color: red"></span>
+										</div>
+										<div class="row_m" >
+
+											<textarea placeholder=""
+												class=" form-control opso_placeholder" id="txtcompany_regis" data_opso="data_file:index,data_key:r49"></textarea>
+											<span id="lbcompany_regis" style="color: red"></span>
+										</div>
+										
+										<div class="row_m">
+											<label class="control-label opso_language" style="color: black" data_opso="data_file:index,data_key:r23"></label> 
+											<span class="btn btn-primary btn-file ">
+												<span class="opso_language" data_opso="data_file:index,data_key:r18"></span>
+												<input type="file" name="txt_certificate">
+											</span> <input type="hidden" id="id_upload_success_certificate"> <br>
+											<strong id="id_upload_success_certificate_strong_message" style="color: red"></strong>
+										</div>
+										<div class="row_m">
+											<label class="control-label opso_language" style="color: black"  data_opso="data_file:index,data_key:r24"></label> 
+											<span class="btn btn-primary btn-file " >
+												<span class="opso_language" data_opso="data_file:index,data_key:r18"></span>
+												<input		type="file" name="txt_license">
+											</span> <input type="hidden" id="id_upload_success_license"> <br>
+											<strong id="id_upload_success_license_strong_message" style="color: red"></strong>
+										</div>

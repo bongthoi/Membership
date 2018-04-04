@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--<![endif]-->
+<!-- HEAD SECTION -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <title>Trang bán hàng vivmall.vn</title>
+       
+    <link href="css/bootstrap.css" rel="stylesheet" />    
+    <link href="css/font-awesome.min.css" rel="stylesheet" />        
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <script src="js/jquery-1.10.2.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/extra.js"></script>
+    <script src="js/client/index.js"></script>
+
+</head>
+<!--END HEAD SECTION -->
+<body>
+    <!-- NAV SECTION -->
+    <div id="header"></div>
+    <div class="container" style="margin-top:200px;margin-bottome:50px">
+    	<div class="row">
+    		<div class="col-md-12" style="text-align:center">
+    			<span style="font-size:50px;">3 bước cơ bản để mở shop</span>
+    		</div>
+    	</div>
+        <div class="row main-low-margin text-center" style="height:500px">
+            <div class="col-md-4 col-sm-4">
+                <div class="circle-body"><i class="fa fa-user fa-5x  icon-set"></i></div>
+                <h3>Đăng ký / Đăng nhập</h3>
+               
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="circle-body"><i class="fa fa-check fa-5x  icon-set"></i></div>
+                <h3>Kích hoạt Shop</h3>
+                
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="circle-body"><i class="fa fa-upload fa-5x  icon-set"></i></div>
+                <h3>Đăng sản phẩm</h3>
+                
+            </div>
+
+        </div>     
+
+    </div>   
+    <div id="footer"></div>
+
+    
+    
+  
+
+</body>
+</html>

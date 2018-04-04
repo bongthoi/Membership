@@ -1,0 +1,19 @@
+
+<li class=""><a onclick="select_page('nontrans');"
+	style="cursor: pointer;"> <i
+		class="menu-icon fa fa-caret-right"></i> Non Translate
+	</a> <b class="arrow"></b>
+	</li>
+
+	<li class=""><a onclick="select_page('translated');"
+		style="cursor: pointer;"> <i
+			class="menu-icon fa fa-caret-right"></i> Translated
+		</a> <b class="arrow"></b>
+		</li>
+
+		<li class=""><a onclick="select_page('nation');"
+			style="cursor: pointer;"> <i
+				class="menu-icon fa fa-caret-right"></i> Nation
+			</a> <b class="arrow"></b>
+			</li>
+

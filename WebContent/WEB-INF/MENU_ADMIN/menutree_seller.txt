@@ -1,0 +1,13 @@
+
+<li class=""><a onclick="select_page('editinfo');"
+	style="cursor: pointer;"> <i
+		class="menu-icon fa fa-caret-right"></i> 信息
+	</a> <b class="arrow"></b>
+	</li>
+	<li class=""><a onclick="select_page('product');"
+		style="cursor: pointer;"> <i
+			class="menu-icon fa fa-caret-right"></i> 产品
+		</a> <b class="arrow"></b>
+		</li>
+
+	

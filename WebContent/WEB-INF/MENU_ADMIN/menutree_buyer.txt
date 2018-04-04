@@ -1,0 +1,5 @@
+<li class=""><a onclick="select_page('requirements');"
+	style="cursor: pointer;"> <i
+		class="menu-icon fa fa-caret-right"></i> Requirements
+	</a> <b class="arrow"></b>
+	</li>
